@@ -1,0 +1,11 @@
+ROOMS
+101;Single;1050.00;true
+102;Single;1200.00;true
+103;Double;2014.00;true
+104;Double;3200.00;true
+105;Deluxe;7000.00;true
+106;Double;4450.00;true
+107;Double;4256.00;true
+108;Double;3654.00;true
+109;Single;1023.00;true
+BOOKINGS

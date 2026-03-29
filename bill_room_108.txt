@@ -1,0 +1,13 @@
+HOTEL BILL
+==============================
+Room Number : 108
+Room Type   : Double
+Price/Day   : Rs.3654.00
+Customer    : Fam
+Contact     : 956248136
+Check-in    : 2026-03-29
+Check-out   : 2026-03-31
+Total Days  : 2
+Total Bill  : Rs.7308.00
+==============================
+Thank you for choosing our hotel!
