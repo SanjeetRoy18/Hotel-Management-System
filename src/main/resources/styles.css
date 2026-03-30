@@ -1,0 +1,295 @@
+.root {
+    -fx-font-family: 'Segoe UI', Helvetica, sans-serif;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #e8f3ff, #f6fbff);
+}
+
+.header-card {
+    -fx-background-color: rgba(255,255,255,0.96);
+    -fx-background-radius: 22;
+    -fx-border-radius: 22;
+    -fx-border-color: rgba(52, 152, 219, 0.18);
+    -fx-border-width: 1;
+    -fx-padding: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(52, 152, 219, 0.14), 24, 0, 0, 12);
+}
+
+.side-panel {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-border-color: rgba(52, 152, 219, 0.16);
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 18;
+}
+
+.section-heading {
+    -fx-font-size: 17;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f3b72;
+}
+
+.subtitle-text {
+    -fx-font-size: 14;
+    -fx-text-fill: #5b6a85;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e1e8ed;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 8 8 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 40;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: transparent transparent #e1e8ed transparent;
+    -fx-background-color: transparent;
+    -fx-padding: 8 12;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
+
+.table-view .table-cell {
+    -fx-padding: 10 12;
+}
+
+.text-field, .combo-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 6;
+    -fx-padding: 10;
+    -fx-font-size: 14;
+    -fx-prompt-text-fill: #95a5a6;
+}
+
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #3498db;
+    -fx-effect: dropshadow(three-pass-box, rgba(52, 152, 219, 0.4), 5, 0, 0, 0);
+}
+
+.button {
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-padding: 10 20;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-background-color: #3498db;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-min-width: 120;
+    -fx-pref-width: 140;
+    -fx-max-width: 240;
+    -fx-min-height: 45;
+    -fx-pref-height: 45;
+    -fx-max-height: 45;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-opacity: 0.85;
+}
+
+.button:pressed {
+    -fx-translate-y: 1;
+}
+
+.btn-primary {
+    -fx-background-color: #3498db;
+}
+
+.btn-success {
+    -fx-background-color: #2ecc71;
+}
+
+.btn-danger {
+    -fx-background-color: #e74c3c;
+}
+
+.btn-dark {
+    -fx-background-color: #34495e;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #e1e8ed;
+    -fx-padding: 30;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 20, 0, 0, 8);
+}
+
+.title-label {
+    -fx-font-size: 36;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 2);
+}
+
+.subtitle-label {
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+.subtitle-text {
+    -fx-font-size: 14;
+    -fx-text-fill: #5b6a85;
+}
+
+.metric-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-color: #dce7f3;
+    -fx-border-width: 1;
+    -fx-padding: 18;
+    -fx-pref-width: 150;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 12, 0, 0, 8);
+}
+
+.metric-title {
+    -fx-font-size: 12;
+    -fx-text-fill: #5b6a85;
+}
+
+.metric-value {
+    -fx-font-size: 28;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f3b72;
+}
+
+.revenue-card {
+    -fx-pref-width: 420;
+    -fx-pref-height: 210;
+    -fx-padding: 24;
+}
+
+.wide-card {
+    -fx-pref-width: 100%;
+}
+
+.revenue-value {
+    -fx-font-size: 52;
+    -fx-text-fill: #1f3b72;
+}
+
+.revenue-box {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ffffff, #edf6ff);
+    -fx-background-insets: 0;
+    -fx-background-radius: 18;
+    -fx-border-insets: 0;
+    -fx-border-radius: 18;
+    -fx-border-color: #bdd4ef;
+    -fx-border-width: 2;
+    -fx-padding: 20 24;
+    -fx-pref-width: 9999;
+    -fx-min-height: 100;
+    -fx-pref-height: 100;
+    -fx-alignment: center-left;
+}
+
+.table-panel {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-color: #e3ebf6;
+    -fx-border-width: 1;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 16, 0, 0, 10);
+    -fx-pref-height: 420;
+}
+
+.table-panel .table-view {
+    -fx-background-color: transparent;
+}
+
+.info-card {
+    -fx-background-color: rgba(52, 152, 219, 0.08);
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-color: rgba(52, 152, 219, 0.16);
+    -fx-border-width: 1;
+    -fx-padding: 18;
+    -fx-pref-width: 280;
+}
+
+.info-card .label {
+    -fx-text-fill: #34495e;
+}
+
+.status-text {
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: 600;
+}
+
+.tab-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab {
+    -fx-background-insets: 0;
+    -fx-padding: 10 16;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #3498db;
+    -fx-text-base-color: white;
+}
+
+.tab-pane .tab-label {
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+.main-tabpane {
+    -fx-background-color: transparent;
+}
+
+.center-card {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-background-radius: 22;
+    -fx-border-radius: 22;
+    -fx-border-color: rgba(52, 152, 219, 0.18);
+    -fx-border-width: 1;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(three-pass-box, rgba(52, 152, 219, 0.08), 24, 0, 0, 10);
+}
+
+.main-tabpane .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.main-tabpane .tab {
+    -fx-background-insets: 0;
+    -fx-padding: 10 18;
+}
+
+.main-tabpane .tab:selected {
+    -fx-background-color: #3498db;
+}
+
+.status-text {
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: 600;
+}

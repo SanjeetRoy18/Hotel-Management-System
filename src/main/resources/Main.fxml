@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <top>
+        <VBox spacing="8" alignment="CENTER" styleClass="header-card">
+            <children>
+                <Label text="Hotel Management System" styleClass="title-label">
+                    <font>
+                        <Font name="Arial" size="28" />
+                    </font>
+                </Label>
+                <Label text="Organize rooms, bookings, and bills from one clear dashboard" styleClass="subtitle-text" wrapText="true" />
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="10" styleClass="center-card">
+            <children>
+                <TabPane tabMinWidth="140" tabClosingPolicy="UNAVAILABLE" styleClass="main-tabpane">
+                    <tabs>
+                <Tab text="Dashboard">
+                    <content>
+                        <VBox spacing="20" styleClass="card">
+                            <children>
+                                <Label text="Dashboard" styleClass="section-heading" />
+                                <HBox spacing="16">
+                                    <children>
+                                        <VBox spacing="10" styleClass="metric-card" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <Label text="Total Rooms" styleClass="metric-title" />
+                                                <Label fx:id="totalRoomsLabel" text="0" styleClass="metric-value" />
+                                            </children>
+                                        </VBox>
+                                        <VBox spacing="10" styleClass="metric-card" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <Label text="Available" styleClass="metric-title" />
+                                                <Label fx:id="availableRoomsLabel" text="0" styleClass="metric-value" />
+                                            </children>
+                                        </VBox>
+                                        <VBox spacing="10" styleClass="metric-card" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <Label text="Booked" styleClass="metric-title" />
+                                                <Label fx:id="bookedRoomsLabel" text="0" styleClass="metric-value" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <VBox spacing="16" styleClass="metric-card revenue-card">
+                                    <children>
+                                        <Label text="Revenue" styleClass="metric-title" />
+                                        <HBox styleClass="revenue-box" prefHeight="100" maxWidth="1.7976931348623157E308">
+                                            <children>
+                                                <Label fx:id="totalRevenueLabel" text="Rs.0.00" styleClass="revenue-value" wrapText="true" />
+                                            </children>
+                                        </HBox>
+                                        <Label text="Estimated from all active bookings currently recorded in the system." wrapText="true" styleClass="subtitle-text" />
+                                    </children>
+                                </VBox>
+                                <HBox spacing="16">
+                                    <children>
+                                        <VBox spacing="12" styleClass="info-card" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <Label text="Overview" styleClass="metric-title" />
+                                                <Label text="Track room occupancy at a glance, then switch to Room Data for search and filtering." wrapText="true" />
+                                            </children>
+                                        </VBox>
+                                        <VBox spacing="12" styleClass="info-card" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <Label text="Next Steps" styleClass="metric-title" />
+                                                <Label text="Use Room Setup to add inventory and Booking to assign guests, checkout rooms, or generate bills." wrapText="true" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab text="Room Data">
+                    <content>
+                        <VBox spacing="16" styleClass="card">
+                            <children>
+                                <Label text="Room Data" styleClass="section-heading" />
+                                <HBox spacing="12" alignment="CENTER_LEFT">
+                                    <children>
+                                        <TextField fx:id="searchField" promptText="Search room or guest" HBox.hgrow="ALWAYS" />
+                                        <Button fx:id="clearFilter" text="Clear" styleClass="btn-dark" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="12" alignment="CENTER_LEFT">
+                                    <children>
+                                        <Button fx:id="showAvailable" text="Available" styleClass="btn-primary" />
+                                        <Button fx:id="showBooked" text="Booked" styleClass="btn-dark" />
+                                        <Button fx:id="showAll" text="All Rooms" styleClass="btn-success" />
+                                    </children>
+                                </HBox>
+                                <VBox spacing="12" styleClass="table-panel" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <TableView fx:id="table" VBox.vgrow="ALWAYS" />
+                                        <Label fx:id="message" text="" styleClass="status-text" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab text="Room Setup">
+                    <content>
+                        <VBox spacing="20" styleClass="card">
+                            <children>
+                                <Label text="Room Setup" styleClass="section-heading" />
+                                <VBox spacing="14">
+                                    <children>
+                                        <TextField fx:id="roomNo" promptText="Room No" />
+                                        <ComboBox fx:id="type" promptText="Room Type" />
+                                        <TextField fx:id="price" promptText="Price" />
+                                    </children>
+                                </VBox>
+                                <HBox spacing="12" alignment="CENTER_RIGHT">
+                                    <children>
+                                        <Button fx:id="addRoom" text="Add Room" styleClass="btn-success" />
+                                        <Button fx:id="deleteRoom" text="Delete Room" styleClass="btn-danger" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab text="Booking">
+                    <content>
+                        <VBox spacing="20" styleClass="card">
+                            <children>
+                                <Label text="Booking Details" styleClass="section-heading" />
+                                <VBox spacing="14">
+                                    <children>
+                                        <TextField fx:id="bookingRoomNo" promptText="Room No" />
+                                        <TextField fx:id="customerName" promptText="Customer Name" />
+                                        <TextField fx:id="contact" promptText="Contact" />
+                                        <TextField fx:id="noOfDays" promptText="No. of Days" />
+                                    </children>
+                                </VBox>
+                                <HBox spacing="12" alignment="CENTER_RIGHT">
+                                    <children>
+                                        <Button fx:id="book" text="Book Room" styleClass="btn-primary" />
+                                        <Button fx:id="checkout" text="Checkout" styleClass="btn-dark" />
+                                        <Button fx:id="generateBill" text="Generate Bill" styleClass="btn-success" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
