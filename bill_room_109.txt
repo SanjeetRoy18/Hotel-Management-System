@@ -1,0 +1,13 @@
+HOTEL BILL
+==============================
+Room Number : 109
+Room Type   : Double
+Price/Day   : Rs.8500.00
+Customer    : Sanj
+Contact     : 9874563201
+Check-in    : 2026-03-31
+Check-out   : 2026-04-03
+Total Days  : 3
+Total Bill  : Rs.25500.00
+==============================
+Thank you for choosing our hotel!
