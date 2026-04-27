@@ -16,7 +16,7 @@ A JavaFX-based Hotel Management application developed with Maven. This project d
 - Java 17
 - JavaFX 26
 - Maven
-- FXML layout and CSS styling
+- FXML layout & CSS styling
 
 ## Project Structure
 
